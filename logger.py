@@ -3,7 +3,7 @@ import logging
 def getLogger(name):
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)
-    formatter = logging.Formatter("%(asctime)s - %(levelname)s - [%(funcName)s:%(lineno)d] - %(message)s")
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s")
 
     file_Handler_Info = logging.FileHandler(filename = "info.log")
     file_Handler_Warning = logging.FileHandler(filename = "warning.log")
